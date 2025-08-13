@@ -1,0 +1,11 @@
+numpy
+pandas[performance]
+geopandas
+geodatasets
+matplotlib
+scipy
+pandas
+statsmodels
+shapely
+rtree
+pygeos
