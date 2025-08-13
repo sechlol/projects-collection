@@ -1,0 +1,113 @@
+0. Run benchmarks for critical functions.
+
+* Running benchmark for screening_function_h
+	- mean: 0.0042 ms
+	- std: 0.0048 ms
+	- min: 0.0017 ms, max: 0.0551 ms
+
+* Running benchmark for screening_function_l
+	- mean: 0.0021 ms
+	- std: 0.0013 ms
+	- min: 0.0007 ms, max: 0.0229 ms
+
+* Running benchmark for coulomb_potential_h
+	- mean: 0.0035 ms
+	- std: 0.0017 ms
+	- min: 0.0026 ms, max: 0.0248 ms
+
+* Running benchmark for coulomb_potential_l
+	- mean: 0.0034 ms
+	- std: 0.0036 ms
+	- min: 0.0017 ms, max: 0.0372 ms
+
+* Running benchmark for g_squared_hh
+	- mean: 0.0047 ms
+	- std: 0.0037 ms
+	- min: 0.0026 ms, max: 0.0248 ms
+
+* Running benchmark for g_squared_hl
+	- mean: 0.0039 ms
+	- std: 0.0017 ms
+	- min: 0.0026 ms, max: 0.0279 ms
+
+* Running benchmark for g_squared_lh
+	- mean: 0.0029 ms
+	- std: 0.0016 ms
+	- min: 0.0017 ms, max: 0.0229 ms
+
+* Running benchmark for g_squared_ll
+	- mean: 0.0032 ms
+	- std: 0.0026 ms
+	- min: 0.0017 ms, max: 0.0222 ms
+
+* Running benchmark for universal_stopping_power
+	- mean: 0.0030 ms
+	- std: 0.0029 ms
+	- min: 0.0017 ms, max: 0.0257 ms
+
+* Running benchmark for find_r_min
+	- mean: 0.0742 ms
+	- std: 0.0247 ms
+	- min: 0.0629 ms, max: 0.3269 ms
+
+* Running benchmark for scattering_angle
+	- mean: 0.9355 ms
+	- std: 0.1458 ms
+	- min: 0.8461 ms, max: 3.7479 ms
+
+* Running benchmark for stopping_power
+	- mean: 44.1772 ms
+	- std: 2.1859 ms
+	- min: 41.5671 ms, max: 57.0521 ms
+	* Benchmark plot saved as ../output/benchmarks.png
+Benchmark results saved to benchmarks.csv
+
+1. Calculating stopping power with universal nuclear stopping power formula.
+	* Peak for 1H -> 28Si at 369.69 eV = 5.20 eV/(atoms/Å^2)
+	* Peak for 28Si -> 198Au at 51114.33 eV = 908.13 eV/(atoms/Å^2)
+	* Plot saved as ../output/universal_sn.png
+
+2. Plotting the function g(r)^2 for different values of b and e_lab.
+	* Plot for 1H -> 28Si saved as ../output/g2_plot_0.png
+	* Plot for 28Si -> 198Au saved as ../output/g2_plot_1.png
+
+3. Plotting value of r_min of interactions for different values of b and e_lab.
+	* Plot for 1H -> 28Si saved as ../output/rmin_plot_0.png
+	* Plot for 28Si -> 198Au saved as ../output/rmin_plot_1.png
+
+4. Plotting the scattering angle of interactions for different values of b and e_lab.
+	* Plot for 1H -> 28Si saved as ../output/scattering_angle_plot_0.png
+	* Plot for 28Si -> 198Au saved as ../output/scattering_angle_plot_1.png
+
+5. Studying b_max for different values of e_lab.
+	* Plot for 1H -> 28Si saved as ../output/b_max_plot_0.png
+	* Plot for 28Si -> 198Au saved as ../output/b_max_plot_1.png
+
+6. Studying the stopping power for different values of e_lab and b. (this can take a minute...)
+	* Peak for 1H -> 28Si at 396.27 eV = 5.10 eV/(atoms/Å^2)
+	* Peak for 28Si -> 198Au at 54789.01 eV = 891.50 eV/(atoms/Å^2)
+	* Plot for stopping power saved as ../output/computed_sn.png
+
+7. Comparing the results from the universal stopping power formula and the computed stopping power.
+	* Plot saved as ../output/errors.png
+
+8. BONUS: Studying the stopping power for other atoms (this can take a minute or two...)
+8.1: Universal Stepping power...
+	* Peak for 4He -> 60Fe at 1702.77 eV = 29.43 eV/(atoms/Å^2)
+	* Peak for 4He -> 63Cu at 1956.40 eV = 30.85 eV/(atoms/Å^2)
+	* Peak for 4He -> 208Pb at 6368.25 eV = 23.44 eV/(atoms/Å^2)
+	* Peak for 60Fe -> 63Cu at 58727.87 eV = 2551.54 eV/(atoms/Å^2)
+	* Peak for 60Fe -> 208Pb at 126038.29 eV = 2910.83 eV/(atoms/Å^2)
+	* Peak for 208Pb -> 4He at 333129.48 eV = 1217.69 eV/(atoms/Å^2)
+	* Plot for stopping power saved as ../output/computed_sn_bonus.png
+8.2: Computed Stepping power...
+	* Peak for 4He -> 60Fe at 1588.57 eV = 29.98 eV/(atoms/Å^2)
+	* Peak for 4He -> 63Cu at 1825.18 eV = 31.43 eV/(atoms/Å^2)
+	* Peak for 4He -> 208Pb at 5941.13 eV = 23.87 eV/(atoms/Å^2)
+	* Peak for 60Fe -> 63Cu at 54789.01 eV = 2599.14 eV/(atoms/Å^2)
+	* Peak for 60Fe -> 208Pb at 117584.96 eV = 2965.12 eV/(atoms/Å^2)
+	* Peak for 208Pb -> 4He at 310786.62 eV = 1240.42 eV/(atoms/Å^2)
+	* Plot saved as ../output/universal_sn_bonus.png
+8.3: Comparing results...
+	* Plot saved as ../output/errors_bonus.png
+
