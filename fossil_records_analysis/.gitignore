@@ -1,5 +1,5 @@
 # Custom folders with large files
-data/
+
 .vector_cache/
 
 .DS_Store
